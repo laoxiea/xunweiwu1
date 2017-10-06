@@ -1,0 +1,22 @@
+<div class="list list-inset">
+    <h4 class="marginleft">更换图像</h4>
+    <p class="text-center"><img ng-src="{{info[0].upic}}" class="perphoto"/></p>
+    <h4 class="marginleft">更换昵称</h4>
+    <label class="item item-input">
+        <input type="text"  ng-model="uName.search" />
+    </label>
+    <h4 class="marginleft">收货人</h4>
+    <label class="item item-input">
+        <input type="text"   ng-model="uAccept.search" >
+    </label>
+    <h4 class="marginleft">联系电话</h4>
+    <label class="item item-input">
+        <input type="text"   ng-model="uPhone.search" >
+    </label>
+    <h4 class="marginleft">收货地址</h4>
+    <label class="item item-input">
+        <input type="text"  ng-model="uAddr.search" >
+    </label>
+    <button class="button button-base button-block" ng-click="updateInfo()">保存修改</button>
+</div>
+

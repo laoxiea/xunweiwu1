@@ -1,0 +1,15 @@
+ <ul class="list list-inset" >
+     <li class="item">
+         <a class="item item-thumbnail-left" ng-click="getinfo()">
+             <img class="perphoto" ng-src={{info[0].upic}}>
+             <h2>{{info[0].uname}}</h2>
+             <p>{{info[0].uaddr}}</p>
+         </a>
+     </li>
+     <li class="item" ng-click="getinfo()">完善个人信息</li>
+     <li class="item" ui-sref="mCart">购物车</li>
+     <li class="item" ui-sref="mOrder">我的订单</li>
+     <li class="item" ng-click="logout()">退出登录</li>
+     <li class="item " ng-click='handleClick()'>关于我们</li>
+ </ul>
+

@@ -1,0 +1,32 @@
+<div class="bar bar-header bar-baseColor">
+    <button class="button-icon item-icon-left button button-small button-balanced ion-chevron-left" ng-click="jump('mUserCenter1')"></button>
+    <div class="h1 title">菜篮子</div>
+    <button class="button button-clear ftwhite" ng-click="edit()">
+        {{content}}
+    </button>
+</div>
+<ion-content class="has-footer has-header">
+    <!--<p>是{{aa}}</p>-->
+    <div class="list list-inset" ng-show="haspro" ng-if="ordersucc">
+        <div class="item" ng-repeat="tmp in cartlist" ng-show="list[$index]">
+            <div class="row row-center">
+                <div class="col"><img ng-src="{{tmp.ppic}}" width="120px"  height="90px"/></div>
+                <div class="col" ng-show="isEdit">
+                    <p>{{tmp.pname}}</p>
+                    <p>{{tmp.pprice}}* <span>{{tmp.dishcount}}</span></p>
+                </div>
+                <div  ng-hide="isEdit" class="col">
+                    <button ng-click="jian($index)">-</button>
+                    <span ng-model="aa">{{tmp.dishcount}}</span>
+                    <button ng-click="plus($index)">+</button>
+                    <button ng-click="delet($index)" class="button button-small button-base flr">删除</button>
+                </div>
+
+            </div>
+        </div>
+        <p class=" text-right item "><span style="vertical-align: middle" class="fanfan marginRight">合计：{{total}}</span>
+        <button style="vertical-align: middle" class="button button-base marginleft" ng-click="addorder()">我要下单</button></p>
+    </div>
+    <button ng-hide="haspro" ui-sref="mStore" class="button button-dark button-block button-clear">购物车空空如也，还不快去买点</button>
+    <button ng-hide="ordersucc" ui-sref="mOrder" class="button button-assertive button-outline button-block">您已下单成功，去我的订单查看</button>
+</ion-content>
